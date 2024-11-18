@@ -39,6 +39,13 @@ def create_points(noise):
 def plot(points):
     fig, axs = plt.subplots(2, 3, sharex=True, sharey=True)
     ((pfig, triangles, circles), (tricircles, voronoi, combined)) = axs
+    
+    pfig.set_title('Points')
+    triangles.set_title('Triangles')
+    circles.set_title('Circles')
+    tricircles.set_title('Triangles with Circles')
+    voronoi.set_title('Voronoi Diagram')
+    combined.set_title('All')
 
     # plot the points
     plot_points(axs.flatten(), points)
